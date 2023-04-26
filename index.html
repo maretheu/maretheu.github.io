@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Bamberger's Website</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 18px;
+    }
+
+    header {
+      background-color: #FFABAB;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 30px;
+      justify-content: left;
+    }
+    header .header-content {
+      max-width: 1100px;
+      display: flex;
+      width: 100%;
+    }
+
+    header .image-border { /* Border around picture of me */
+      width:126px;
+      height: 126px;
+      background-color: #D14D72;
+      border-radius: 50%;
+    }
+    header img { /* Picture of me */
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-right: 30px;
+      border-radius: 50%;
+      margin-left: 3px;
+      margin-top: 3px;
+    }
+
+    header h1 { /* Name & Pronouns */
+      font-size: 28px;
+      margin-top: 15px;
+      margin-left: 15px;
+      margin-bottom: 10px;
+    }
+
+    header h2 { /* WU buttons */
+      font-size: 20px;
+      margin-left: 15px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    header h2:hover { /* Highlight WU buttons */
+      background-color: #D14D72;
+    }
+
+
+    h4 { /* Navigation Section */
+      height: 50px;
+      width: 100%;
+      margin-top:0;
+      margin-bottom: 0;
+      background-color: #FCC8D1;
+      display: table;
+      clear: both;
+    }
+    h4 div { /* Individual Buttons */
+      float: left;
+      height: 65px;
+      width: 20%;
+      text-align: center;
+      background-color: #FFABAB;
+    }
+    h4 div:hover { /* Navigation Hover Effect */
+      background-color: #D14D72;
+    }
+
+
+    main { /* Lower half of page */
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #FCC8D1;
+      background-color: #FEF2F4;
+      margin-top: 0;
+      height:700px;
+    }
+
+    h3 { /* About me header */
+      margin-top:0;
+      height: 50px;
+      text-align: center;
+      background-color: #FFABAB;
+      width: 100%;
+    }
+    .about { /* About me box */
+      margin-left: 10px;
+      margin-top: 10px;
+      border: 2px solid #FCC8D1;
+      background-color: #FEF2F4;
+      width: 30%;
+      height: 400px;
+    }
+    .about-content { /* About me text box */
+      margin-left: 10px;
+      margin-top:15px;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <div class="image-border"> <!-- Image of me & border around it -->
+      <img src="https://github.com/maretheu/maretheu.github.io/blob/main/Alex.jpg?raw=true" alt="Your Name">
+    </div>
+    <div>
+      <h1>Alex Bamberger (They/Them)</h1> <!-- Name & Pronouns -->
+      <h2 id="WU" onclick="window.location.href='https://willamette.edu/'">Willamette University</h2> <!-- Link to WU -->
+      <h2 onclick="window.location.href='https://willamette.edu/undergraduate/computer-science/index.html'">Computer Science Major</h2>
+    </div>
+  </div>
+</header>
+
+<h4> <!-- Navigation -->
+  <div>Home Page<br>You are here</div>
+  <div>My Art</div>
+  <div id="column2">Resume</div>
+  <div>Ethics Writing</div>
+  <div>Links</div>
+</h4>
+
+<main>
+  <section class="about"> <!-- About Me -->
+    <h3>About Me</h3>
+    <p class="about-content">
+      Hi, welcome to my personal website! My name is Alex Bamberger. I am a fourth year Computer Science Major at Willamette University.
+      Some of my hobbies include drawing, reading, and playing Dungeons & Dragons.
+    </p>
+  </section>
+</main>
+</body>
