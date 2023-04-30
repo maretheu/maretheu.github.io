@@ -5,13 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Bamberger's Website</title>
   <style>
+    :root,
+    :root {
+      --select-color: #D14D72;
+      --menu-color: #FFABAB;
+      --background-color: #FEF2F4;
+      --text-color: black;
+    }
+    :root.dark {
+      --select-color: #0d1321;
+      --menu-color: #1d2d44;
+      --background-color: #364559;
+      --text-color: lightgrey;
+    }
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      color: #333;
+      color: var(--text-color);
       font-size: 18px;
     }
 
@@ -20,7 +33,7 @@
       width: 100%;
       margin-top:0;
       margin-bottom: 0;
-      background-color: #FCC8D1;
+      background-color: var(--background-color);
       display: table;
       clear: both;
     }
@@ -29,18 +42,18 @@
       height: 65px;
       width: 20%;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
     }
     h4 div:hover { /* Navigation Hover Effect */
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
 
     main { /* Lower half of page */
       display: flex;
       justify-content: space-between;
-      border: 1px solid #FCC8D1;
+      border: 2px solid var(--select-color);
       border-bottom: 0;
-      background-color: #FEF2F4;
+      background-color: var(--background-color);
       margin-top: 0;
     }
 
@@ -57,17 +70,37 @@
       width: 300px;
       margin-left: auto;
       margin-right: auto;
-      background-color: #FCC8D1;
+      background-color: var(--background-color);
     }
     tr div:hover {
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
     .bottom{
       border-top: 0;
       height: 100vh;
     }
 
-  </style>
+    .themeButton {
+      width: 150px;
+      height: 50px;
+      position: sticky;
+      left: 10px;
+      top: 90%;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5%;
+      background-color: var(--menu-color);
+    }
+    .themeButton:hover {
+      background-color: var(--select-color);
+    }
+
+    </style>
+    <script>
+     function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+    }
+    </script>
 </head>
 <body>
 <h4> <!-- Navigation -->
@@ -91,5 +124,7 @@
     <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/Wages.html'">Wage Theft</div> </td> </tr>
   </table>
 </main>
-<main class="bottom"></main>
+<main class="bottom">
+  <div class="themeButton" onclick="toggleTheme()">Dark Mode</div>
+</main>
 </body>
