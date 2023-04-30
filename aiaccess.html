@@ -1,48 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The Home of Zone</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Bamberger's Website</title>
+  <style>
 
-    <!-- Style -->
-    <style>
-        h1{
-            text-align: center;
-        }
-        body{
-            width: 50% ;
-            margin: auto;
-        }
-        .dark-mode{
-            background-color: black;
-            color: lightblue;
-        }
-    </style>
-    <script type="text/javascript">
-        function darkMode(){
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 18px;
+    }
 
+    h4 { /* Navigation Section */
+      height: 50px;
+      width: 100%;
+      margin-top:0;
+      margin-bottom: 0;
+      background-color: #FCC8D1;
+      display: table;
+      clear: both;
+    }
+    h4 div { /* Individual Buttons */
+      float: left;
+      height: 65px;
+      width: 20%;
+      text-align: center;
+      background-color: #FFABAB;
+    }
+    h4 div:hover { /* Navigation Hover Effect */
+      background-color: #D14D72;
+    }
+
+    main { /* Lower half of page */
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #FCC8D1;
+      background-color: #FEF2F4;
+      margin-top: 0;
+      height:100vh;
+    }
+
+    .writing { /* Writing box */
+      margin:20px;
+      height: 90%;
+      border: 2px solid #FCC8D1;
+      background-color: #FEF2F4;
+    }
+    h3 { /* Writing header */
+      margin-top:0;
+      margin-bottom: 0;
+      text-align: center;
+      background-color: #FFABAB;
+      width: 100%;
+    }
+    .link {
+      margin: 0;
+    }
+    .link:hover {
+      background-color: #D14D72;
+    }
+    .content { /* Writing text box */
+      text-indent: 30px;
+      margin-left: 10px;
+      margin-top:15px;
+    }
+
+  </style>
 </head>
 <body>
 
-    <h1> <!-- Header -->
-        <b> AI has great potential to improve accessibility and create a more equitable world but with how often AI systems are biased we must be careful not to make things worse. </b>
-    </h1>
 
-    <p>
-        It is always good when new methods of increasing accessibility are created and the use of artificial intelligence to this end has great potential to do good and make the world more accessible for everyone within it. The emphasis of the article on accessibility specifically within the context of a company workplace however, is something that is somewhat concerning as it emphasizes the productivity and value produced by neurodivergent people as opposed to actually prioritizing making their lives easier and as a result ends up feeling slightly dehumanizing. In addition to simply being dehumanizing, this prioritization of profits, productivity, and produced value naturally creates the risk that those with neurodivergence or disability which cannot be easily profited from would be left behind to suffer without any meaningful support or gain from these new artificial intelligences.
-        <br>
-        <br>
-        Another major concern with this adoption of artificial intelligence with the proclaimed goal of improving accessibility is the simple question of whether or not it actually does so. And if it does not significantly improve accessibility what is it doing instead? These articles seem to gloss over and overlook some of the questions that could be raised about how some of these developments in artificial intelligence could be used for great harm, which is something that i feel should be addressed. Artificial intelligence used for facial recognition could be used to resolve captchas and open phones but it can also be used to track down and arrest protesters, furthermore there are many examples of these sorts of systems being used in this sort of actively malicious manner.
-        <br>
-        <br>
-        Even if the artificial intelligence systems are not used at all in this sort of actively malicious and harmful manner it is still incredibly easy to accidentally make a system that internalizes unconscious biases from its creators and perpetuates them in a directly harmful manner. For example there have been many instances of facial recognition programs having substantial trouble with people of color. Even in instances where artificial intelligence has been utilized with the goal of reducing harm and increasing equity that does not always end up being how things turn out and if we are hoping to increase accessibility and equity through the use of these technologies it is vital that we are aware of the risks and the ways in which they have failed in the past so that we can better work to avoid those downfalls and truly succeed in achieving what we set out to do.
+<h4> <!-- Navigation -->
+  <div>Home Page</div>
+  <div>My Art</div>
+  <div id="column2">Resume</div>
+  <div>Ethics Writing<br>You are here</div>
+  <div>Links</div>
+</h4>
+
+<main>
+  <section class="writing"> <!-- About Me -->
+    <h3>AI & Accessibility</h3>
+    <h3 onclick="window.location.href='https://medium.com/the-neuro/how-ai-is-improving-accessibility-510f6c70177c'" class="link">From "How AI Is Improving Accessibility"</h3>
+    <p class="content">
+      When talking about the concept of diversity and accessibility, it is vitally important to include the voices of the affected groups in the conversation from the start. Often however, people will claim to have some significant expertise in the topic and some solution to the problem they perceive without speaking to or working with the groups relevant to the conversation. Because of this, these people often end up creating policies and ideas that are either unhelpful or actively harmful to the people they claim to be trying to help.
     </p>
-
-    <div style="text-align: center;">
-        <button onclick="darkMode()">Toggle Dark Mode</button>
-    </div>
-
+    <p class="content">
+      The article “How AI Is Improving Accessibility” falls into this trap. While speaking about the topic of accessibility with regards to neurodiversity and people with mental disabilities, this article ends up focusing wholly on how neurodivergent people can be made productive and profitable within the systems that they are forced to live in, while ignoring the actual problem of systems that are built in such a way as to restrict and harm the freedoms of neurodivergent people. It is important to realize that the core problem facing neurodivergent communities is not that of their neurodiversity but rather that society is not built in a way that accommodates and accepts their unique needs. To help these communities, the focus should be on changing the way society is structured at its core to allow neurodivergent people to live a fully and fulfilling life without being restricted in their freedoms by the barriers that currently exist. To this end the conversation about neurodiversity must be centered around the voices of neurodivergent individuals and organizations made by and for them. By driving the conversation in this manner, the relevant experts will be at the forefront and better able to ensure that the decisions being made and the policies being enacted are ones which will best serve the neurodivergent community.
+    </p>
+  </section>
+</main>
 </body>
-</html>
