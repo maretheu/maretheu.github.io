@@ -1,35 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The Home of Zone</title>
-    
-    <!-- Style -->
-    <style>
-        h1 {color: red; font-weight: bold;}
-        p {color: aqua}
-    </style>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Bamberger's Website</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 18px;
+    }
+
+    h4 { /* Navigation Section */
+      height: 50px;
+      width: 100%;
+      margin-top:0;
+      margin-bottom: 0;
+      background-color: #FCC8D1;
+      display: table;
+      clear: both;
+    }
+    h4 div { /* Individual Buttons */
+      float: left;
+      height: 65px;
+      width: 20%;
+      text-align: center;
+      background-color: #FFABAB;
+    }
+    h4 div:hover { /* Navigation Hover Effect */
+      background-color: #D14D72;
+    }
+
+    main { /* Lower half of page */
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #FCC8D1;
+      background-color: #FEF2F4;
+      margin-top: 0;
+      height:100vh;
+    }
+
+    .writing { /* Writing box */
+      margin:20px;
+      height: 90%;
+      border: 2px solid #FCC8D1;
+      background-color: #FEF2F4;
+    }
+    h3 { /* Writing header */
+      margin-top:0;
+      margin-bottom: 0;
+      text-align: center;
+      background-color: #FFABAB;
+      width: 100%;
+    }
+    .link {
+      margin: 0;
+    }
+    .link:hover {
+      background-color: #D14D72;
+    }
+    .content { /* Writing text box */
+      text-indent: 30px;
+      margin-left: 10px;
+      margin-top:15px;
+    }
+
+  </style>
 </head>
 <body>
-    
-    <h1> <!-- Header -->
-        This is a test Omelas.html
-    </h1>
 
-    <strong> <!-- Paragraph 1 -->
-        i am groot
-    </strong>
 
-    <p> <!-- Paragraph 2 -->
-        Oh look <br>
-        I have a line break
+<h4> <!-- Navigation -->
+  <div onclick="window.location.href='https://maretheu.github.io/index.html'">Home Page</div>
+  <div onclick="window.location.href='https://maretheu.github.io/art.html'">My Art</div>
+  <div onclick="window.location.href='https://maretheu.github.io/resume.html'">Resume</div>
+  <div onclick="window.location.href='https://maretheu.github.io/ethics.html'">Ethics Writing<br>You are here</div>
+  <div onclick="window.location.href='https://maretheu.github.io/links.html'">Links</div>
+</h4>
+
+<main>
+  <section class="writing"> <!-- About Me -->
+    <h3>Omelas</h3>
+    <h3 class="link" onclick="window.location.href='https://shsdavisapes.pbworks.com/f/Omelas.pdf'">From "The Ones Who Walk Away From Omelas"</h3>
+    <p class="content">
+      Nothing here yet, there will be soon, hopefully, but there isnt just yet, why are you still here, go read something else ive written, or just read something else in general, or just do anything other than stare at this blank page.
     </p>
-
-    <!-- Image with link -->
-    <a href="https://www.tumblr.com/zoneco/708478699678400512/zoneco-todays-dd-game-got-derailed-by-a-sudden?source=share">
-        <img src="https://64.media.tumblr.com/78e9160e9e2014477579a189778a8402/ae34748f74c40fe8-58/s1280x1920/c6cab9e3b4fb9ff8f87265203b82016f975adef7.pnj"
-        title="The Shadow Wizard, by me" alt="A digital drawing of a wizard with black and white robes, tilting her head to the side and wearing a tall and pointy wizard hat"></img>
-    </a>
-
+  </section>
+</main>
 </body>
-</html>
