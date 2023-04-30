@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Bamberger's Website</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      font-size: 18px;
+    }
+
+    h4 { /* Navigation Section */
+      height: 50px;
+      width: 100%;
+      margin-top:0;
+      margin-bottom: 0;
+      background-color: #FCC8D1;
+      display: table;
+      clear: both;
+    }
+    h4 div { /* Individual Buttons */
+      float: left;
+      height: 65px;
+      width: 20%;
+      text-align: center;
+      background-color: #FFABAB;
+    }
+    h4 div:hover { /* Navigation Hover Effect */
+      background-color: #D14D72;
+    }
+
+    main { /* Lower half of page */
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #FCC8D1;
+      border-bottom: 0;
+      background-color: #FEF2F4;
+      margin-top: 0;
+    }
+
+    table{
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      border-spacing: 0;
+    }
+    tr p {
+      font-weight: bold;
+    }
+    tr div {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #FCC8D1;
+    }
+    tr div:hover {
+      background-color: #D14D72;
+    }
+    .bottom{
+      border-top: 0;
+      height: 100vh;
+    }
+
+  </style>
+</head>
+<body>
+<h4> <!-- Navigation -->
+  <div onclick="window.location.href='https://maretheu.github.io/index.html'">Home Page</div>
+  <div onclick="window.location.href='https://maretheu.github.io/art.html'">My Art</div>
+  <div onclick="window.location.href='https://maretheu.github.io/resume.html'">Resume</div>
+  <div onclick="window.location.href='https://maretheu.github.io/ethics.html'">Ethics Writing<br>You are here</div>
+  <div onclick="window.location.href='https://maretheu.github.io/links.html'">Links</div>
+</h4>
+
+<main>
+  <table style="justify-content: center">
+    <tr> <td> <p>Ethics Writings</p> </td> </tr>
+    <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/omelas.html'">Omelas</div> </td> </tr>
+    <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/aiaccess.html'">AI and Accessibility</div> </td> </tr>
+    <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/aiaccess2.html'">AI and Accessibility 2</div> </td> </tr>
+    <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/sigcse.html'">SIGCSE</div> </td> </tr>
+    <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/kindafunny.html'">Kinda Funny</div> </td> </tr>
+    <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/hud.html'">HUD</div> </td> </tr>
+    <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/stop.html'">STOP</div> </td> </tr>
+    <tr> <td> <div onclick="window.location.href='https://maretheu.github.io/Wages.html'">Wage Theft</div> </td> </tr>
+  </table>
+</main>
+<main class="bottom"></main>
+</body>
