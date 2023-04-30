@@ -5,18 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Bamberger's Website</title>
   <style>
+    :root,
+      :root {
+      --select-color: #D14D72;
+      --menu-color: #FFABAB;
+      --background-color: #FEF2F4;
+      --text-color: black;
+    }
+      :root.dark {
+      --select-color: #0d1321;
+      --menu-color: #1d2d44;
+      --background-color: #364559;
+      --text-color: lightgrey;
+    }
+
+
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      color: #333;
+      color: var(--text-color);
       font-size: 18px;
     }
 
     header {
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
       height: 200px;
       display: flex;
       align-items: center;
@@ -33,7 +48,7 @@
     header .image-border { /* Border around picture of me */
       width:126px;
       height: 126px;
-      background-color: #D14D72;
+      background-color: var(--select-color);
       border-radius: 50%;
     }
     header img { /* Picture of me */
@@ -60,7 +75,7 @@
       margin-bottom: 0;
     }
     header h2:hover { /* Highlight WU buttons */
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
 
 
@@ -69,7 +84,7 @@
       width: 100%;
       margin-top:0;
       margin-bottom: 0;
-      background-color: #FCC8D1;
+      background-color: var(--menu-color);
       display: table;
       clear: both;
     }
@@ -78,27 +93,27 @@
       height: 65px;
       width: 20%;
       text-align: center;
-      background-color: #FFABAB;
     }
     h4 div:hover { /* Navigation Hover Effect */
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
 
 
     main { /* Lower half of page */
       display: flex;
       justify-content: space-between;
-      border: 1px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
       margin-top: 0;
       height: 100vh;
     }
 
     .about { /* About me box */
       margin-left: 10px;
+      margin-right: 10px;
       margin-top: 10px;
-      border: 2px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
       width: 100%;
       height: 400px;
     }
@@ -110,11 +125,31 @@
       margin-top:0;
       height: 50px;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
       width: 100%;
     }
 
+    .themeButton {
+      width: 150px;
+      height: 50px;
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5%;
+      background-color: var(--menu-color);
+    }
+    .themeButton:hover {
+      background-color: var(--select-color);
+    }
+
   </style>
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+    }
+  </script>
 </head>
 <body>
 <header>
@@ -147,4 +182,5 @@
     </p>
   </section>
 </main>
+<div class="themeButton" onclick="toggleTheme()">Dark Mode</div>
 </body>
