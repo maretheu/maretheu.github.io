@@ -5,13 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Bamberger's Website</title>
   <style>
+    :root,
+    :root {
+      --select-color: #D14D72;
+      --menu-color: #FFABAB;
+      --background-color: #FEF2F4;
+      --text-color: black;
+    }
+    :root.dark {
+      --select-color: #0d1321;
+      --menu-color: #1d2d44;
+      --background-color: #364559;
+      --text-color: lightgrey;
+    }
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      color: #333;
+      color: var(--text-color);
       font-size: 18px;
     }
 
@@ -20,7 +33,7 @@
       width: 100%;
       margin-top:0;
       margin-bottom: 0;
-      background-color: #FCC8D1;
+      background-color: var(--menu-color);
       display: table;
       clear: both;
     }
@@ -29,17 +42,17 @@
       height: 65px;
       width: 20%;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
     }
     h4 div:hover { /* Navigation Hover Effect */
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
 
     main { /* Lower half of page */
       display: flex;
       justify-content: space-between;
-      border: 1px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
       margin-top: 0;
       height:100vh;
     }
@@ -47,21 +60,21 @@
     .writing { /* Writing box */
       margin:20px;
       height: 90%;
-      border: 2px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
     }
     h3 { /* Writing header */
       margin-top:0;
       margin-bottom: 0;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
       width: 100%;
     }
     .link {
       margin: 0;
     }
     .link:hover {
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
     .content { /* Writing text box */
       text-indent: 30px;
@@ -69,7 +82,27 @@
       margin-top:15px;
     }
 
-  </style>
+    .themeButton {
+      width: 150px;
+      height: 50px;
+      position: sticky;
+      margin: 0 auto;
+      top: 90%;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5%;
+      background-color: var(--menu-color);
+    }
+    .themeButton:hover {
+      background-color: var(--select-color);
+    }
+
+    </style>
+    <script>
+     function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+    }
+    </script>
 </head>
 <body>
 
@@ -95,6 +128,7 @@
     <p class="content">
       Even if the artificial intelligence systems are not used at all in this sort of actively malicious and harmful manner it is still incredibly easy to accidentally make a system that internalizes unconscious biases from its creators and perpetuates them in a directly harmful manner. For example there have been many instances of facial recognition programs having substantial trouble with people of color. Even in instances where artificial intelligence has been utilized with the goal of reducing harm and increasing equity that does not always end up being how things turn out and if we are hoping to increase accessibility and equity through the use of these technologies it is vital that we are aware of the risks and the ways in which they have failed in the past so that we can better work to avoid those downfalls and truly succeed in achieving what we set out to do.
     </p>
+    <div class="themeButton" onclick="toggleTheme()">Dark Mode</div>
   </section>
 </main>
-</body> 
+</body>
