@@ -19,8 +19,6 @@
       --text-color: lightgrey;
     }
 
-
-
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -67,6 +65,11 @@
       margin-left: 15px;
       margin-bottom: 10px;
     }
+    header h1:hover {
+    }
+    header h1:hover:after {
+      content: attr(data-hover);
+    }
 
     header h2 { /* WU buttons */
       font-size: 20px;
@@ -101,8 +104,8 @@
 
     main { /* Lower half of page */
       display: flex;
-      border-top: 2px solid var(--select-color);
       justify-content: space-between;
+      border: 2px solid var(--select-color);
       background-color: var(--background-color);
       margin-top: 0;
       height: 100vh;
@@ -158,7 +161,7 @@
       <img src="https://github.com/maretheu/maretheu.github.io/blob/main/Alex.jpg?raw=true" alt="Alex Bamberger">
     </div>
     <div>
-      <h1>Alex Bamberger (They/Them)</h1> <!-- Name & Pronouns -->
+      <h1 data-hover=" (They/Them, Xie/Xir)">Alex Bamberger</h1> <!-- Name & Pronouns -->
       <h2 id="WU" onclick="window.location.href='https://willamette.edu/'">Willamette University</h2> <!-- Link to WU -->
       <h2 onclick="window.location.href='https://willamette.edu/undergraduate/computer-science/index.html'">Computer Science Major</h2>
     </div>
