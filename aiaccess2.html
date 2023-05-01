@@ -5,13 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Bamberger's Website</title>
   <style>
+    :root,
+    :root {
+      --select-color: #D14D72;
+      --menu-color: #FFABAB;
+      --background-color: #FEF2F4;
+      --text-color: black;
+    }
+    :root.dark {
+      --select-color: #0d1321;
+      --menu-color: #1d2d44;
+      --background-color: #364559;
+      --text-color: lightgrey;
+    }
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      color: #333;
+      color: var(--text-color);
       font-size: 18px;
     }
 
@@ -20,7 +33,7 @@
       width: 100%;
       margin-top:0;
       margin-bottom: 0;
-      background-color: #FCC8D1;
+      background-color: var(--menu-color);
       display: table;
       clear: both;
     }
@@ -29,17 +42,17 @@
       height: 65px;
       width: 20%;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
     }
     h4 div:hover { /* Navigation Hover Effect */
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
 
     main { /* Lower half of page */
       display: flex;
       justify-content: space-between;
-      border: 1px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
       margin-top: 0;
       height:100vh;
     }
@@ -47,21 +60,21 @@
     .writing { /* Writing box */
       margin:20px;
       height: 90%;
-      border: 2px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
     }
     h3 { /* Writing header */
       margin-top:0;
       margin-bottom: 0;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
       width: 100%;
     }
     .link {
       margin: 0;
     }
     .link:hover {
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
     .content { /* Writing text box */
       text-indent: 30px;
@@ -69,7 +82,27 @@
       margin-top:15px;
     }
 
-  </style>
+    .themeButton {
+      width: 150px;
+      height: 50px;
+      position: sticky;
+      margin: 0 auto;
+      top: 90%;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5%;
+      background-color: var(--menu-color);
+    }
+    .themeButton:hover {
+      background-color: var(--select-color);
+    }
+
+    </style>
+    <script>
+     function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+    }
+    </script>
 </head>
 <body>
 
@@ -92,6 +125,7 @@
     <p class="content">
       The article “How AI Is Improving Accessibility” falls into this trap. While speaking about the topic of accessibility with regards to neurodiversity and people with mental disabilities, this article ends up focusing wholly on how neurodivergent people can be made productive and profitable within the systems that they are forced to live in, while ignoring the actual problem of systems that are built in such a way as to restrict and harm the freedoms of neurodivergent people. It is important to realize that the core problem facing neurodivergent communities is not that of their neurodiversity but rather that society is not built in a way that accommodates and accepts their unique needs. To help these communities, the focus should be on changing the way society is structured at its core to allow neurodivergent people to live a fully and fulfilling life without being restricted in their freedoms by the barriers that currently exist. To this end the conversation about neurodiversity must be centered around the voices of neurodivergent individuals and organizations made by and for them. By driving the conversation in this manner, the relevant experts will be at the forefront and better able to ensure that the decisions being made and the policies being enacted are ones which will best serve the neurodivergent community.
     </p>
-  </section> 
+    <div class="themeButton" onclick="toggleTheme()">Dark Mode</div>
+  </section>
 </main>
 </body>
