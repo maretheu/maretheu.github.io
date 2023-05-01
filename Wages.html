@@ -5,13 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Bamberger's Website</title>
   <style>
+    :root,
+    :root {
+      --select-color: #D14D72;
+      --menu-color: #FFABAB;
+      --background-color: #FEF2F4;
+      --text-color: black;
+    }
+    :root.dark {
+      --select-color: #0d1321;
+      --menu-color: #1d2d44;
+      --background-color: #364559;
+      --text-color: lightgrey;
+    }
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      color: #333;
+      color: var(--text-color);
       font-size: 18px;
     }
 
@@ -20,7 +33,7 @@
       width: 100%;
       margin-top:0;
       margin-bottom: 0;
-      background-color: #FCC8D1;
+      background-color: var(--menu-color);
       display: table;
       clear: both;
     }
@@ -29,17 +42,17 @@
       height: 65px;
       width: 20%;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
     }
     h4 div:hover { /* Navigation Hover Effect */
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
 
     main { /* Lower half of page */
       display: flex;
       justify-content: space-between;
-      border: 1px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
       margin-top: 0;
       height:100vh;
     }
@@ -47,21 +60,21 @@
     .writing { /* Writing box */
       margin:20px;
       height: 90%;
-      border: 2px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
     }
     h3 { /* Writing header */
       margin-top:0;
       margin-bottom: 0;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
       width: 100%;
     }
     .link {
       margin: 0;
     }
     .link:hover {
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
     .content { /* Writing text box */
       text-indent: 30px;
@@ -69,7 +82,27 @@
       margin-top:15px;
     }
 
-  </style>
+    .themeButton {
+      width: 150px;
+      height: 50px;
+      position: sticky;
+      margin: 0 auto;
+      top: 90%;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5%;
+      background-color: var(--menu-color);
+    }
+    .themeButton:hover {
+      background-color: var(--select-color);
+    }
+
+    </style>
+    <script>
+     function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+    }
+    </script>
 </head>
 <body>
 
@@ -92,6 +125,7 @@
     <p class="content">
       The data used for this publication is the CPS-ORG data. This data is from a long running government survey program, monitoring a variety of different labor market conditions. This data has been used to calculate a wide range of different things such as the unemployment rate, incomes, and poverty, as well as other important pieces of data. This survey is a voluntary one with new data collected every month from a small percentage of the population. The data collected is available to the public usually within one to two months after it is gathered according to the census.gov website. Because the survey is voluntary and the data is publicly available it is largely ethical although it does only survey 59,000 households every month which is not very representative of the larger United States population. It’s important to make sure that this data is being used to support and help individuals and families within the United States but it is also important to make sure that it is in fact representative of the general population. To determine if it is being used in a largely ethical manner we should make sure that these goals are kept in mind throughout its use. We should also make sure that the scientists collecting this data continue to work to make it more accurate and representative of the larger population and try to avoid focusing too heavily on a small subset of the population so that the data is actually useful on a larger scale.
     </p>
-  </section> 
+    <div class="themeButton" onclick="toggleTheme()">Dark Mode</div>
+  </section>
 </main>
 </body>
