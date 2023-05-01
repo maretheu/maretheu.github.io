@@ -5,13 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Bamberger's Website</title>
   <style>
+    :root,
+    :root {
+      --select-color: #D14D72;
+      --menu-color: #FFABAB;
+      --background-color: #FEF2F4;
+      --text-color: black;
+    }
+    :root.dark {
+      --select-color: #0d1321;
+      --menu-color: #1d2d44;
+      --background-color: #364559;
+      --text-color: lightgrey;
+    }
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      color: #333;
+      color: var(--text-color);
       font-size: 18px;
     }
 
@@ -20,7 +33,7 @@
       width: 100%;
       margin-top:0;
       margin-bottom: 0;
-      background-color: #FCC8D1;
+      background-color: var(--menu-color);
       display: table;
       clear: both;
     }
@@ -29,17 +42,17 @@
       height: 65px;
       width: 20%;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
     }
     h4 div:hover { /* Navigation Hover Effect */
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
 
     main { /* Lower half of page */
       display: flex;
       justify-content: space-between;
-      border: 1px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
       margin-top: 0;
       height:100vh;
     }
@@ -47,21 +60,21 @@
     .writing { /* Writing box */
       margin:20px;
       height: 90%;
-      border: 2px solid #FCC8D1;
-      background-color: #FEF2F4;
+      border: 2px solid var(--select-color);
+      background-color: var(--background-color);
     }
     h3 { /* Writing header */
       margin-top:0;
       margin-bottom: 0;
       text-align: center;
-      background-color: #FFABAB;
+      background-color: var(--menu-color);
       width: 100%;
     }
     .link {
       margin: 0;
     }
     .link:hover {
-      background-color: #D14D72;
+      background-color: var(--select-color);
     }
     .content { /* Writing text box */
       text-indent: 30px;
@@ -69,7 +82,27 @@
       margin-top:15px;
     }
 
-  </style>
+    .themeButton {
+      width: 150px;
+      height: 50px;
+      position: sticky;
+      margin: 0 auto;
+      top: 90%;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5%;
+      background-color: var(--menu-color);
+    }
+    .themeButton:hover {
+      background-color: var(--select-color);
+    }
+
+    </style>
+    <script>
+     function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+    }
+    </script>
 </head>
 <body>
 
@@ -84,7 +117,7 @@
 
 <main>
   <section class="writing"> <!-- About Me -->
-    <h3>AI & Accessibility</h3>
+    <h3>Black Hair and Video Games</h3>
     <h3 onclick="window.location.href='https://www.youtube.com/watch?v=pepkcF9UXng'" class="link">We Need To Fix Black Hair in Video Games - The Blessing Show"</h3>
     <p class="content">
       Throughout the history of the United States and beyond black people in general and black women and girls more specifically have long been discriminated against for their hair and the choice to wear their hair naturally. This is an injustice that continues to be perpetuated to this day throughout the world, denying opportunities and stripping away happiness and self-confidence from the black community. This is not a small issue either, but a wide spread and deeply invasive problem that shows itself in all different settings, from schools, to jobs, to movies and video games, invading all aspects of life for many people until they feel forced to conform to the societal standards of beauty and appearance that are imposed down upon them. Because of the importance of hair in black culture and the significant harm caused by these standards and impositions of beauty it is vitally important that this system be broken down and the systemic barriers and other forms of harm be removed.
@@ -101,6 +134,7 @@
     <p class="content">
       It is also important to work to ensure that in the environments producing these games that black hair is accepted and welcomed and to work to deconstruct these harmful systems more directly through education and training to prevent discrimination, as well as generally making a safe and open environment. As all of this is being worked on there is also the necessity of being open to change and improvement throughout the process as it is likely if not inevitable that efforts will fail along the way and that the process being used to combat discrimination will need to adapt to different circumstances as they arrive. To this end communication between groups will be very important to ensure that all involved parties are working together to the best of their abilities to make things better for everyone involved.
     </p>
-  </section> 
+    <div class="themeButton" onclick="toggleTheme()">Dark Mode</div>
+  </section>
 </main>
 </body>
