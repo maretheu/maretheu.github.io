@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Bamberger's Website</title>
+  <style>
+    :root,
+    :root {
+      --select-color: #D14D72;
+      --menu-color: #FFABAB;
+      --background-color: #FEF2F4;
+      --text-color: black;
+    }
+    :root.dark {
+      --select-color: #0d1321;
+      --menu-color: #1d2d44;
+      --background-color: #364559;
+      --text-color: lightgrey;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: var(--text-color);
+      font-size: 18px;
+    }
+
+    h4 { /* Navigation Section */
+      height: 50px;
+      width: 100%;
+      margin-top:0;
+      margin-bottom: 0;
+      background-color: var(--background-color);
+      display: table;
+      clear: both;
+    }
+    h4 div { /* Individual Buttons */
+      float: left;
+      height: 65px;
+      width: 20%;
+      text-align: center;
+      background-color: var(--menu-color);
+    }
+    h4 div:hover { /* Navigation Hover Effect */
+      background-color: var(--select-color);
+    }
+
+    main { /* Lower half of page */
+      display: flex;
+      justify-content: space-between;
+      border: 2px solid var(--select-color);
+      border-bottom: 0;
+      background-color: var(--background-color);
+      margin-top: 0;
+    }
+
+    table{
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      border-spacing: 0;
+    }
+    tr p {
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: var(--background-color);
+    }
+    .hover:hover {
+      background-color: var(--select-color);
+    }
+    .bottom{
+      border-top: 0;
+      height: 100vh;
+    }
+
+    .themeButton {
+      width: 150px;
+      height: 50px;
+      position: sticky;
+      left: 10px;
+      top: 90%;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 5%;
+      background-color: var(--menu-color);
+    }
+    .themeButton:hover {
+      background-color: var(--select-color);
+    }
+
+  </style>
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark')
+    }
+  </script>
+</head>
+<body>
+<h4> <!-- Navigation -->
+  <div onclick="window.location.href='https://maretheu.github.io/index.html'">Home Page</div>
+  <div onclick="window.location.href='https://maretheu.github.io/art.html'">My Art</div>
+  <div onclick="window.location.href='https://maretheu.github.io/resume.html'">Resume</div>
+  <div onclick="window.location.href='https://maretheu.github.io/ethics.html'">Ethics Writing</div>
+  <div onclick="window.location.href='https://maretheu.github.io/links.html'">Contact<br>You are here</div>
+</h4>
+
+<main>
+  <table style="justify-content: center">
+    <tr> <td> <p>Personal Email: alex@alexbamberger.com</p> </td> </tr>
+    <tr> <td> <p>School Email: arbamberger@willamette.edu</p> </td> </tr>
+    <tr> <td> <p class="hover">Link</p> </td> </tr>
+
+  </table>
+</main>
+<main class="bottom">
+  <div class="themeButton" onclick="toggleTheme()">Dark Mode</div>
+</main>
+</body>
